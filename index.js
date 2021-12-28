@@ -1,6 +1,7 @@
-const express = require('express');
+// const express = require('express');
+const express = require('./express');
 
-const app = express();
+const app = new express();
 
 app.get('/test', (req, res, next) => {
     console.log('test1');
