@@ -44,7 +44,7 @@ class express {
     search(method, url) {
         const matchList = [];
         [...this.routers[method], ...this.routers.all].forEach(item => {
-            item.path === url && matchList.push(item.handle);
+            (item.path === '/' || item.path === url) && matchList.push(item.handle);
         });
         return matchList;
     }
